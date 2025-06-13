@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PCU Chatbot RAG</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Floating chat button -->
+    <button id="chat-toggle" class="chat-btn" aria-label="Open chat">💬</button>
+
+    <!-- Modal chat window -->
+    <div id="chat-modal" class="chat-modal hidden" role="dialog" aria-modal="true">
+        <div class="chat-header">
+            <span>🤖 PCU Chatbot</span>
+            <button id="close-btn" aria-label="Close chat">×</button>
+        </div>
+
+        <!-- Chat history -->
+        <div id="chat-window" class="chat-window">
+            <!-- Sapaan awal -->
+            <div class="msg bot">
+                <div class="bubble">
+                    Halo! Saya PCU Chatbot 🤖<br />Ada yang bisa saya bantu hari ini?
+                </div>
+            </div>
+        </div>
+
+        <!-- Input -->
+        <form id="chat-form" autocomplete="off">
+            <input id="chat-input" type="text" placeholder="Ask me anything…" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!-- Lib Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Main logic -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+flask
+qdrant-client
+langchain
+langchain-ollama
+langchain-huggingface
+huggingface-hub
