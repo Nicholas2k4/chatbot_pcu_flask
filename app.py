@@ -29,8 +29,8 @@ llm = OllamaLLM(model=LLM_MODEL, temperature=TEMPERATURE)
 def retrieve_top_docs(query: str):
     qvec = embedder.embed_query(query)
     hits_all = []
-    for coll in qdrant.get_collections().collections:
-        hits = qdrant.search(
+    for coll in qdrant_client.get_collections().collections:
+        hits = qdrant_client.search(
             collection_name=coll.name,
             query_vector=qvec,
             limit=TOP_K_PER_COLL,
@@ -92,4 +92,4 @@ def chat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8501)
+    app.run(debug=True, host="localhost", port=5025)

@@ -2,7 +2,11 @@
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-    background: #f5f7fa;
+    background-image: url("https://cdn.rri.co.id/berita/Surabaya/o/1719027609777-IMG-20240621-WA0021/fk2b6izgr4xogfh.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
 }
 
 /* floating button */

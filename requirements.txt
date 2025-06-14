@@ -4,3 +4,4 @@ langchain
 langchain-ollama
 langchain-huggingface
 huggingface-hub
+sentence-transformers
